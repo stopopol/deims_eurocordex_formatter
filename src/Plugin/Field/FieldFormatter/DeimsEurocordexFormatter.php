@@ -48,64 +48,63 @@ class DeimsEurocordexFormatter extends FormatterBase {
       $record_uuid = $item->value;
 
       if (array_key_exists($record_uuid, $eurocordex_uuid_list)) {
-    
         $table_string = '<b>There is EURO-CORDEX climate scenario data available for this site:</b><br>';
-        $table_string .= '<table style="width:100%">';
+        $table_string .= '<table class="table">';    
 
         $table_string .= '<tr>';
           $table_string .= '<td>Projected Near Surface Specific Humidity Change</td>';
-          $table_string .= '<td>(<a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_huss_EUR-11_rcp26/' . $record_uuid . '.EURO-CORDEX_huss_EUR-11_rcp26.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP26</a>,</td>';
-          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_huss_EUR-11_rcp45/' . $record_uuid . '.EURO-CORDEX_huss_EUR-11_rcp45.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP45</a>,</td>';
-          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_huss_EUR-11_rcp85/' . $record_uuid . '.EURO-CORDEX_huss_EUR-11_rcp85.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP85</a>)</td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_huss_EUR-11_rcp26/' . $record_uuid . '.EURO-CORDEX_huss_EUR-11_rcp26.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP26</a></td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_huss_EUR-11_rcp45/' . $record_uuid . '.EURO-CORDEX_huss_EUR-11_rcp45.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP45</a></td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_huss_EUR-11_rcp85/' . $record_uuid . '.EURO-CORDEX_huss_EUR-11_rcp85.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP85</a></td>';
         $table_string .= '</tr>';
 
         $table_string .= '<tr>';
           $table_string .= '<td>Projected Precipitation Change</td>';
-          $table_string .= '<td>(<a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_pr_EUR-11_rcp26/' . $record_uuid . '.EURO-CORDEX_pr_EUR-11_rcp26.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP26</a>, </td>';
-          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_pr_EUR-11_rcp45/' . $record_uuid . '.EURO-CORDEX_pr_EUR-11_rcp45.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP45</a>, </td>';
-          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_pr_EUR-11_rcp85/' . $record_uuid . '.EURO-CORDEX_pr_EUR-11_rcp85.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP85</a>)</td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_pr_EUR-11_rcp26/' . $record_uuid . '.EURO-CORDEX_pr_EUR-11_rcp26.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP26</a></td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_pr_EUR-11_rcp45/' . $record_uuid . '.EURO-CORDEX_pr_EUR-11_rcp45.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP45</a></td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_pr_EUR-11_rcp85/' . $record_uuid . '.EURO-CORDEX_pr_EUR-11_rcp85.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP85</a></td>';
         $table_string .= '</tr>';
 
         $table_string .= '<tr>';
           $table_string .= '<td>Projected Sea Level Pressure Change</td>';
-          $table_string .= '<td>(<a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_psl_EUR-11_rcp26/' . $record_uuid . '.EURO-CORDEX_psl_EUR-11_rcp26.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP26</a>,</td>';
-          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_psl_EUR-11_rcp45/' . $record_uuid . '.EURO-CORDEX_psl_EUR-11_rcp45.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP45</a>,</td>';
-          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_psl_EUR-11_rcp85/' . $record_uuid . '.EURO-CORDEX_psl_EUR-11_rcp85.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP85</a>)</td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_psl_EUR-11_rcp26/' . $record_uuid . '.EURO-CORDEX_psl_EUR-11_rcp26.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP26</a></td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_psl_EUR-11_rcp45/' . $record_uuid . '.EURO-CORDEX_psl_EUR-11_rcp45.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP45</a></td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_psl_EUR-11_rcp85/' . $record_uuid . '.EURO-CORDEX_psl_EUR-11_rcp85.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP85</a></td>';
         $table_string .= '</tr>';
 
         $table_string .= '<tr>';
           $table_string .= '<td>Projected Surface Downwelling Shortwave Radiation</td>';
-          $table_string .= '<td>(<a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_rsds_EUR-11_rcp26/' . $record_uuid . '.EURO-CORDEX_rsds_EUR-11_rcp26.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP26</a>,</td>';
-          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_rsds_EUR-11_rcp45/' . $record_uuid . '.EURO-CORDEX_rsds_EUR-11_rcp45.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP45</a>,</td>';
-          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_rsds_EUR-11_rcp85/' . $record_uuid . '.EURO-CORDEX_rsds_EUR-11_rcp85.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP85</a>)</td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_rsds_EUR-11_rcp26/' . $record_uuid . '.EURO-CORDEX_rsds_EUR-11_rcp26.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP26</a></td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_rsds_EUR-11_rcp45/' . $record_uuid . '.EURO-CORDEX_rsds_EUR-11_rcp45.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP45</a></td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_rsds_EUR-11_rcp85/' . $record_uuid . '.EURO-CORDEX_rsds_EUR-11_rcp85.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP85</a></td>';
         $table_string .= '</tr>';
 
         $table_string .= '<tr>';
           $table_string .= '<td>Projected Near-Surface Wind Speed</td>';
-          $table_string .= '<td>(<a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_sfcWind_EUR-11_rcp26/' . $record_uuid . '.EURO-CORDEX_sfcWind_EUR-11_rcp26.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP26</a>,</td>';
-          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_sfcWind_EUR-11_rcp45/' . $record_uuid . '.EURO-CORDEX_sfcWind_EUR-11_rcp45.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP45</a>,</td>';
-          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_sfcWind_EUR-11_rcp85/' . $record_uuid . '.EURO-CORDEX_sfcWind_EUR-11_rcp85.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP85</a>)</td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_sfcWind_EUR-11_rcp26/' . $record_uuid . '.EURO-CORDEX_sfcWind_EUR-11_rcp26.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP26</a></td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_sfcWind_EUR-11_rcp45/' . $record_uuid . '.EURO-CORDEX_sfcWind_EUR-11_rcp45.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP45</a></td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_sfcWind_EUR-11_rcp85/' . $record_uuid . '.EURO-CORDEX_sfcWind_EUR-11_rcp85.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP85</a></td>';
         $table_string .= '</tr>';
 
         $table_string .= '<tr>';
           $table_string .= '<td>Projected Near-Surface Air Temperature</td>';
-          $table_string .= '<td>(<a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_tas_EUR-11_rcp26/' . $record_uuid . '.EURO-CORDEX_tas_EUR-11_rcp26.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP26</a>,</td>';
-          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_tas_EUR-11_rcp45/' . $record_uuid . '.EURO-CORDEX_tas_EUR-11_rcp45.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP45</a>,</td>';
-          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_tas_EUR-11_rcp85/' . $record_uuid . '.EURO-CORDEX_tas_EUR-11_rcp85.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP85</a>)</td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_tas_EUR-11_rcp26/' . $record_uuid . '.EURO-CORDEX_tas_EUR-11_rcp26.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP26</a></td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_tas_EUR-11_rcp45/' . $record_uuid . '.EURO-CORDEX_tas_EUR-11_rcp45.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP45</a></td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_tas_EUR-11_rcp85/' . $record_uuid . '.EURO-CORDEX_tas_EUR-11_rcp85.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP85</a></td>';
         $table_string .= '</tr>';
 
         $table_string .= '<tr>';
           $table_string .= '<td>Projected Daily Maximum Near-Surface Air Temperature</td>';
-          $table_string .= '<td>(<a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_tasmax_EUR-11_rcp26/' . $record_uuid . '.EURO-CORDEX_tasmax_EUR-11_rcp26.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP26</a>,</td>';
-          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_tasmax_EUR-11_rcp45/' . $record_uuid . '.EURO-CORDEX_tasmax_EUR-11_rcp45.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP45</a>,</td>';
-          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_tasmax_EUR-11_rcp85/' . $record_uuid . '.EURO-CORDEX_tasmax_EUR-11_rcp85.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP85</a>)</td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_tasmax_EUR-11_rcp26/' . $record_uuid . '.EURO-CORDEX_tasmax_EUR-11_rcp26.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP26</a></td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_tasmax_EUR-11_rcp45/' . $record_uuid . '.EURO-CORDEX_tasmax_EUR-11_rcp45.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP45</a></td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_tasmax_EUR-11_rcp85/' . $record_uuid . '.EURO-CORDEX_tasmax_EUR-11_rcp85.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP85</a></td>';
         $table_string .= '</tr>';
 
         $table_string .= '<tr>';
           $table_string .= '<td>Projected Daily Minimum Near-Surface Air Temperature</td>';
-          $table_string .= '<td>(<a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_tasmin_EUR-11_rcp26/' . $record_uuid . '.EURO-CORDEX_tasmin_EUR-11_rcp26.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP26</a>,</td>';
-          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_tasmin_EUR-11_rcp45/' . $record_uuid . '.EURO-CORDEX_tasmin_EUR-11_rcp45.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP45</a>,</td>';
-          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_tasmin_EUR-11_rcp85/' . $record_uuid . '.EURO-CORDEX_tasmin_EUR-11_rcp85.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP85</a>)</td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_tasmin_EUR-11_rcp26/' . $record_uuid . '.EURO-CORDEX_tasmin_EUR-11_rcp26.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP26</a></td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_tasmin_EUR-11_rcp45/' . $record_uuid . '.EURO-CORDEX_tasmin_EUR-11_rcp45.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP45</a></td>';
+          $table_string .= '<td><a href="https://deims.org/export/eurocordex/eLTER_site_data.EURO-CORDEX_tasmin_EUR-11_rcp85/' . $record_uuid . '.EURO-CORDEX_tasmin_EUR-11_rcp85.dataV2018-02-07_procV2019-05-21_plotV2019-07-29.png" target="_blank">RCP85</a></td>';
         $table_string .= '</tr>';
 
         $table_string .= '</table><br>';
