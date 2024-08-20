@@ -1,7 +1,6 @@
 {
     "name": "stopopol/deims_eurocordex_formatter",
     "description": "Field Formatter for printing the eurocordex links using the deims.id field",
-    "type": "drupal-custom-module",
+    "type": "drupal-module",
     "homepage": "https://github.com/stopopol/deims_eurocordex_formatter"
 }
-
